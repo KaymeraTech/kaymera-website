@@ -1,0 +1,8 @@
+{
+    "/dist/js/script.js": "/dist/js/script.js",
+    "/dist/css/style.css": "/dist/css/style.css",
+    "/dist/css/style-light.css": "/dist/css/style-light.css",
+    "/dist/css/style-dark.css": "/dist/css/style-dark.css",
+    "/dist/js/libs/utils.js": "/dist/js/libs/utils.js",
+    "/dist/js/libs/intlTelInput.js": "/dist/js/libs/intlTelInput.js"
+}

@@ -1,0 +1,98 @@
+@media(max-width: 1100px){
+    .desktop{
+        display: none!important;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .header .logo .logo-mobile{
+        width: 39px;
+        height: auto;
+    }
+
+    .header-inner{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .header-secondary-menu{
+        height: calc(100vh - 54px);
+        overflow-y: auto;
+    }
+
+    .secondary-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 32px;
+        padding-bottom: 72px;
+        & > li {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            &> a{
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+        & > li.has-submenu{
+            & > a::after{
+                display: none;
+            }
+            .submenu{
+                &::before, 
+                &::after{
+                    display: none;
+                }
+                position: relative;
+                opacity: 1;
+                visibility: visible;
+                background-color: transparent;
+                box-shadow: none;
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-left: 32px;
+                padding-right: 32px;
+                width: 100%;
+                li{
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .main{
+        padding-top: 58px;
+    }
+
+    .section-contact-form {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        .img-mockup{
+            height: auto;
+            margin: auto;
+            right: -20%;
+        }
+    }
+
+    .section-partners{
+        .wrap{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .security-panel-inner{
+        padding: 32px 48px;
+    }
+
+    .security-panel .round{
+        width: 60vw;
+        height: 60vw;
+        right: -15%;
+        bottom: -55%;
+    }
+
+}

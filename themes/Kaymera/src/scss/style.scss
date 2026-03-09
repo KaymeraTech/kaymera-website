@@ -1,0 +1,114 @@
+@use '@material/button';
+@use "@material/fab";
+@use "@material/typography/mdc-typography";
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+// @use "@material/list/mdc-list";
+// @use "@material/menu-surface/mdc-menu-surface";
+// @use "@material/menu/mdc-menu";
+// @use "@material/select/select";
+
+// @include select.core-styles();
+
+// .demo-width-class {
+//   width: 400px;
+// }
+// @use "@material/radio";
+// @use "@material/form-field";
+
+// @include radio.core-styles;
+// @include form-field.core-styles;
+
+// @use '@material/textfield';
+
+@include button.core-styles;
+@include fab.core-styles;
+// @include textfield.core-styles;
+
+@import '_variables';
+@import '_grid';
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+html{
+    --mdc-typography-font-family: "Montserrat";
+    --mdc-theme-primary: #1AA995;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+.body-overflow{
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.main{
+    overflow: hidden;
+}
+
+.wrap{
+    max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.main{
+    padding-top: 81px;
+}
+
+.jc-space-between{
+    justify-content: space-between; 
+}
+
+.mobile{
+    display: none;
+}
+
+@import '_header';
+@import '_page';
+@import '_modal';
+@import '_animation';
+@import 'tel-input.scss';
+@import 'page-store';
+
+@import '_media1366';
+@import '_media1280';
+@import '_media1200';
+@import '_media1100';
+@import '_media960';
+@import '_media768';
+@import '_media720';
+@import '_media640';
+@import '_media480';
+@import '_media420';
+@import '_media360';
+
+
+@import '_wp-styles';
+@import '../css/intlTelInput';
+@import '../css/swiper.min.css';

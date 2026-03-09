@@ -1,0 +1,64 @@
+.wp_modal {
+    .modal-dialog {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 416px;
+        &.medium-size {
+            max-width: 656px;
+        }
+    }
+    .modal-title {
+        .dark & {
+            color:white;
+        }
+    }
+}
+form {
+    .response {
+        width: 100%;
+        margin-bottom: -24px;
+        margin-top: 24px;
+        &.error {
+            color: red !important;
+        }
+        .light & {
+            color:black;
+        }
+        .dark & {
+            color:white;
+        }
+    }
+    .text {
+        .dark & {
+            color:rgba(255, 255, 255, 0.6);;
+        }
+    }
+    .input-checkbox {
+        .dark & {
+            border-color:#797979;
+        }
+    }
+    .checkbox {
+        margin-bottom: 26px;
+    }
+}
+.fadein {
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.modal-body {
+    .dark & {
+        background: #272727;
+    }
+}
+.section-store-grid.margin-cor {
+    padding-bottom: 0;
+    margin-bottom: -15px;
+}
+@media(min-width: 961px){
+    .section-store-grid.margin-cor {
+        margin-bottom: -90px;
+    }
+    .section-main-tabs.z-index-cor {
+        position: relative;
+    }
+}

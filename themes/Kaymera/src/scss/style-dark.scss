@@ -1,0 +1,143 @@
+@import '_variables';
+
+.dark{
+    .header{
+        background-color: #1E1E1E;
+        border-bottom-color: #000;
+    }
+
+    .logo-light{
+        display: block;
+    }
+
+    .logo-dark{
+        display: none;
+    }
+
+    .menu-main{
+        li{
+            a{
+                color: #fff;
+            }
+        }
+    }
+
+    .btn-menu{
+        .btn-menu-text{
+            color: #fff;
+        }
+        .line{
+            background-color: #fff;
+        }
+    }
+
+    .footer-top{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), #121212;
+    }
+
+    .footer-menu-title{
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    .footer-menu-list li a{
+        color: rgba(255, 255, 255, .87);
+    }
+
+    .footer-bottom{
+        background-color: #121212;
+        .socials{
+            li{
+                a{
+                    .icon{
+                       fill: rgba(#fff, .87); 
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright{
+        color: rgba(#fff, .87);
+    }
+
+
+    .main{
+        background-color: #1E1E1E;
+    }
+
+    .block-text-center{
+        .overline{
+            color: rgba(#fff, .6);
+        }
+        .title-center{
+            color: #fff;
+        }
+        .text-center{
+            color: rgba(#fff, .87);
+        }
+    }  
+
+    .text-block-title, 
+    .text-block-description{
+        color: rgba(#fff, .87);
+    }
+
+    .choose-panels-title{
+        color: #fff;
+    }
+
+    .choose-panels-desc{
+        color: rgba(#fff, .38);
+        a{
+            color: $green;
+        }
+    }
+
+    .mdc-button--outlined{
+        border-color: rgba(#fff, .12);
+        transition: all .4s ease-in-out;
+        &:hover{
+            background-color: rgba(#fff, .04);
+        }
+    }
+
+    .choose-panel-image-block{
+        border-color: rgba(#fff, .12);
+        &:hover{
+            border-color: $green;
+        }
+    }
+
+    .choose-panel-text{ 
+        color: rgba(#fff, .87);
+    }
+
+    .form-block{
+        background-color: #272727;
+        .form-title{
+            color: rgba(#fff, .87);
+        }
+        .form-text{
+            color: rgba(#fff, .6);
+        }
+    }
+
+    .textfield{
+        input{
+            background-color: #272727;
+            border-color: #797979;
+            color: #fff;
+        }
+        .placeholder{
+            background-color: #272727;
+            color: rgba(#fff, .6);
+        }
+    }
+
+    .item-icon-text{
+        .text{
+            color: rgba(#fff, .87); 
+        }
+    }
+
+}

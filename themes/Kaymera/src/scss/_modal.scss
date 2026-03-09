@@ -1,0 +1,152 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba($dark, .8);
+    z-index: 700;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    &.open-modal{
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal-dialog{
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 656px;
+    } 
+    .modal-body{
+        position: relative;
+
+        background-color: #fff;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding: 48px 48px 60px;
+        .modal-title{
+            max-width: calc(100% - 48px);
+        }
+        .btn-close{
+            position: absolute;
+            top: 48px;
+            right: 48px;
+        }
+    }
+}
+
+.btn-close{
+    position: absolute;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    .icon{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+.modal-form{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .textfield{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        width: 100%;
+        input{
+            width: 100%;
+        }
+    }
+    .textfield-50{
+        width: calc(50% - 8px);
+    }
+    .mdc-button{
+        margin-top: 24px;
+    }
+}
+
+
+.textfield{
+    &.error{
+        input{
+            border-color: $red;
+        }
+        .placeholder{
+            color: $red;
+        }
+    }
+}
+
+.modal-body {
+    .loading {
+        padding: 15px;
+        color: white;
+        text-align: center;
+        .h3 {
+            font-size: 34px;
+            line-height: 150%;
+            margin-bottom: 15px;
+        }
+        .text {
+            font-size: 16px;
+            line-height: 160%;
+            font-weight: 200;
+        }
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+// Loader
+@keyframes dot-keyframes {
+    0% {
+      opacity: .4;
+      transform: scale(1, 1);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: scale(1.2, 1.2);
+    }
+  
+    100% {
+      opacity: .4;
+      transform: scale(1, 1);
+    }
+  }
+  
+  .loading-dots {
+    margin: 20px 0 30px 0;
+    text-align: center;
+    width: 100%;
+    
+    &--dot {
+      animation: dot-keyframes 1.5s infinite ease-in-out;
+      background-color: $red;
+      border-radius: 50%;
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      margin: 7px;
+      
+      &:nth-child(2) {
+        animation-delay: .5s;
+      }
+      
+      &:nth-child(3) {
+        animation-delay: 1s;
+      }
+    }
+  }

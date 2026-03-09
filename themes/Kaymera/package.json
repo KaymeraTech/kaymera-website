@@ -1,0 +1,38 @@
+{
+  "name": "eternal-skincare",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Mavericks Agency",
+  "license": "ISC",
+  "devDependencies": {
+    "@material/button": "^7.0.0",
+    "@material/layout-grid": "^7.0.0",
+    "@material/ripple": "^7.0.0",
+    "@material/textfield": "^7.0.0",
+    "@material/typography": "^7.0.0",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^7.0.2",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.1.0",
+    "laravel-mix": "^5.0.1",
+    "material-components-web": "^7.0.0",
+    "sass": "^1.26.11",
+    "sass-loader": "^7.3.1",
+    "tiny-slider": "^2.9.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "@material/fab": "^7.0.0",
+    "@material/tab-bar": "^7.0.0",
+    "lottie-web": "^5.7.3"
+  }
+}

@@ -1,0 +1,14 @@
+@media(max-width: 720px){
+    .modal {
+        .modal-dialog{
+            margin-left: 25px;
+            margin-right: 25px;
+            width: calc(100% - 50px);
+        }
+        .modal-body{
+            margin-left: 0;
+            margin-right: 0;
+            max-width: none;
+        }
+    }
+}
