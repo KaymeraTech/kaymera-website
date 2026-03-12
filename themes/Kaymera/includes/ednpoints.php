@@ -79,7 +79,10 @@ function sendForm()
         $to = $email;
         $subject = "New Client";
         $headers = 'Content-type: text/html; charset="utf-8"'."\r\n";
-        $headers .= "From: Kaymera <no-reply@kaymera.com>\r\n";
+        if (!empty($_POST['email'])) {
+            $headers .= 'Reply-To: ' . sanitize_email($_POST['email']) . "\r\n";
+        }
+
         $message =
              $_POST['name']
             .'<br />'
@@ -170,7 +173,10 @@ function sendFormFull()
         $to = $email;
         $subject = "New Client";
         $headers = 'Content-type: text/html; charset="utf-8"'."\r\n";
-        $headers .= "From: Kaymera <no-reply@kaymera.com>\r\n";
+        if (!empty($_POST['email'])) {
+            $headers .= 'Reply-To: ' . sanitize_email($_POST['email']) . "\r\n";
+        }
+
         $message =
              $_POST['first_name']
             .'<br />'
@@ -246,7 +252,10 @@ function registration_event()
         $to = $email;
         $subject = "New Client";
         $headers = 'Content-type: text/html; charset="utf-8"'."\r\n";
-        $headers .= "From: Kaymera <no-reply@kaymera.com>\r\n";
+        if (!empty($_POST['email'])) {
+            $headers .= 'Reply-To: ' . sanitize_email($_POST['email']) . "\r\n";
+        }
+
         //Message to email
         $message =
         '<h2>Member info</h2><br />'
@@ -389,7 +398,10 @@ function download_file()
         $to = $email;
         $subject = "New Client";
         $headers = 'Content-type: text/html; charset="utf-8"'."\r\n";
-        $headers .= "From: Kaymera <no-reply@kaymera.com>\r\n";
+        if (!empty($_POST['email'])) {
+            $headers .= 'Reply-To: ' . sanitize_email($_POST['email']) . "\r\n";
+        }
+
         //Get Form data
         $email = $_POST['email'];
         $download_id = $_POST['post_id'];
@@ -415,7 +427,8 @@ function download_file()
         . $email . '<br />'
         . '<h3>Link to material:</h3><br />'
         . '<a target="_blank" href="'.$download_url.'">'.$post_title.'</a><br />';
-        wp_mail($email, "Link to material", $message, $headers);
+        $headers_client = 'Content-type: text/html; charset="utf-8"'."\r\n";
+        wp_mail($email, "Link to material", $message, $headers_client);
         //Set status by check
         if($check) {
             $status = 'publish';
@@ -459,7 +472,10 @@ function sendChoose()
         $to = $email;
         $subject = "New Client";
         $headers = 'Content-type: text/html; charset="utf-8"'."\r\n";
-        $headers .= "From: Kaymera <no-reply@kaymera.com>\r\n";
+        if (!empty($_POST['email'])) {
+            $headers .= 'Reply-To: ' . sanitize_email($_POST['email']) . "\r\n";
+        }
+
         $message =
              $_POST['first_name']
             .'<br />'
@@ -608,7 +624,9 @@ function send_order_data_email() {
     $to = $email;
     $subject = "New Order";
     $headers = 'Content-type: text/html; charset="utf-8"'."\r\n";
-    $headers .= "From: Kaymera <no-reply@kaymera.com>\r\n";
+    if (!empty($_POST['email'])) {
+        $headers .= 'Reply-To: ' . sanitize_email($_POST['email']) . "\r\n";
+    }
     $message =
         $_POST['name']
         .'<br />'
