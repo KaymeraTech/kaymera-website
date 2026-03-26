@@ -13,6 +13,26 @@ function validate_submission($form_data, $limit_seconds = 60) {
         exit;
     }
 
+    // 2.5. Second Honeypot check
+    if (isset($form_data['real_email']) && !empty($form_data['real_email'])) {
+        wp_send_json(['result' => 'Submission blocked.']);
+        exit;
+    }
+
+    // 2.6. Time-based validation (Minimum 3 seconds to fill the form)
+    if (isset($form_data['ts']) && !empty($form_data['ts'])) {
+        $submitted_ts = intval($form_data['ts']);
+        $current_ts = time();
+        if (($current_ts - $submitted_ts) < 3) {
+            wp_send_json(['result' => 'Submission too fast. Please wait a few seconds.']);
+            exit;
+        }
+    } else {
+        // If timestamp is missing, it's likely a bot directly hitting the endpoint
+        wp_send_json(['result' => 'Security check failed.']);
+        exit;
+    }
+
     // 3. User Agent check (basic)
     if (empty($_SERVER['HTTP_USER_AGENT'])) {
         wp_send_json(['result' => 'Submission blocked.']);

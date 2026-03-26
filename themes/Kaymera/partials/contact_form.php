@@ -23,6 +23,10 @@
     <input name="data_set" type="hidden" value="Footer form">
     <input name="link" type="hidden" value="<?= 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
 
+    <!-- Spam protection -->
+    <input name="ts" type="hidden" value="<?= time() ?>">
+    <div style="display:none !important;"><input type="text" name="real_email" tabindex="-1" autocomplete="off"></div>
+
     <input type="submit"
 	       value="<?php the_field('short_form','option'); ?>"
 	       class="mdc-button mdc-button--raised inline-demo-button mdc-ripple-upgraded"

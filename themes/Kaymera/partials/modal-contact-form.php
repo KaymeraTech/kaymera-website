@@ -31,6 +31,10 @@
                 <input id="country" name="country" type="hidden">
                 <input name="form_type" type="hidden" value="short">
                 <input name="link" type="hidden" value="<?= 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+                
+                <!-- Spam protection -->
+                <input name="ts" type="hidden" value="<?= time() ?>">
+                <div style="display:none !important;"><input type="text" name="real_email" tabindex="-1" autocomplete="off"></div>
 
                 <button type="submit" class="mdc-button mdc-button--raised inline-demo-button mdc-ripple-upgraded">
                     <span class="mdc-button__label dark"><?php the_field('short_form_modal','option'); ?></span>
